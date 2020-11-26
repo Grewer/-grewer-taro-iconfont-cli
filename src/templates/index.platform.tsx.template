@@ -1,0 +1,24 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import React, { FunctionComponent } from 'react';
+#rpx-1:import Taro from '@tarojs/taro';:#
+
+interface Props {
+  name: '#names#';
+  size?: number;
+  color?: string | string[];
+}
+
+const IconFont: FunctionComponent<Props> = (props) => {
+  const { name, size, color } = props;
+
+  // @ts-ignore
+  return <iconfont name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
+};
+
+IconFont.defaultProps = {
+  size: #size#,
+};
+
+export default IconFont;
